@@ -1,0 +1,27 @@
+<configuration>
+
+    <!-- Console Appender: Outputs logs to the console -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File Appender: Writes logs to a file -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>stresser.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Root Logger: Logs all messages at INFO level or above to both console and file -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+
+    <!-- Logger for a specific package (optional, if you want different levels for specific packages) -->
+    <logger name="com.stresser" level="DEBUG"/>
+
+</configuration>

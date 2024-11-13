@@ -1,0 +1,47 @@
+duration: 120
+report_path: "stresser_report.txt"
+
+cpu:
+  enabled: true
+  threads: 20
+
+memory:
+  enabled: false
+  arrays: 2
+  array_size_mb: 512
+
+disk:
+  enabled: false
+  file_count: 10
+  file_size_mb: 100
+
+network:
+  enabled: false
+  duration: 60
+  download_url: "https://ash-speed.hetzner.com/100MB.bin"
+
+file_descriptors:
+  enabled: false
+  open_files: 100
+
+threads:
+  enabled: false
+  count: 4
+
+behavior:
+  ramp_up_time: 10
+  ramp_down_time: 10
+  burst_mode: false
+  burst_duration_seconds: 15
+  burst_pause_seconds: 5
+
+logging:
+  enabled: true
+  log_file: "stresser.log"
+  log_level: "INFO"
+
+limits:
+  cpu_max_usage_pct: 80
+  memory_max_usage_mb: 4096
+  disk_max_io_speed_mbps: 100
+  network_max_bandwidth_mbps: 50
