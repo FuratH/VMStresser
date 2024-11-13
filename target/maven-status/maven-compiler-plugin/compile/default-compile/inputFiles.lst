@@ -1,0 +1,10 @@
+/Users/furat/IdeaProjects/VMStresser/src/main/java/com/metrics/MetricsModule.java
+/Users/furat/IdeaProjects/VMStresser/src/main/java/com/stresser/MemoryStresser.java
+/Users/furat/IdeaProjects/VMStresser/src/main/java/com/stresser/ConfigLoader.java
+/Users/furat/IdeaProjects/VMStresser/src/main/java/com/stresser/NetworkStresser.java
+/Users/furat/IdeaProjects/VMStresser/src/main/java/com/stresser/Stresser.java
+/Users/furat/IdeaProjects/VMStresser/src/main/java/com/metrics/ReportGenerator.java
+/Users/furat/IdeaProjects/VMStresser/src/main/java/com/stresser/DiskStresser.java
+/Users/furat/IdeaProjects/VMStresser/src/main/java/com/stresser/ThreadStresser.java
+/Users/furat/IdeaProjects/VMStresser/src/main/java/com/stresser/FileDescriptorStresser.java
+/Users/furat/IdeaProjects/VMStresser/src/main/java/com/stresser/CpuStresser.java

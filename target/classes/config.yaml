@@ -1,4 +1,4 @@
-duration: 120
+duration: 1800
 report_path: "stresser_report.txt"
 
 cpu:

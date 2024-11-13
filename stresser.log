@@ -64,3 +64,9 @@
 2024-10-03 15:21:03 - [main] INFO  com.stresser.CpuStresser - Generating CPU load for 20 threads with max usage 80% for 120 seconds.
 2024-10-03 15:23:03 - [main] INFO  com.stresser.Stresser - Stress test completed. Shutting down metrics collection.
 2024-10-03 15:23:03 - [main] INFO  com.stresser.Stresser - Stress test report generated at: stresser_report.txt
+2024-11-13 19:39:19 - [main] INFO  com.stresser.Stresser - Logging enabled. Output to file: stresser.log
+2024-11-13 19:39:19 - [main] INFO  com.stresser.Stresser - Starting CPU stress.
+2024-11-13 19:39:19 - [main] INFO  com.stresser.CpuStresser - Generating CPU load for 20 threads with max usage 80% for 1800 seconds.
+2024-11-13 19:48:13 - [main] INFO  com.stresser.Stresser - Logging enabled. Output to file: stresser.log
+2024-11-13 19:48:13 - [main] INFO  com.stresser.Stresser - Starting CPU stress.
+2024-11-13 19:48:13 - [main] INFO  com.stresser.CpuStresser - Generating CPU load for 20 threads with max usage 80% for 1800 seconds.
