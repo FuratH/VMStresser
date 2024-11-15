@@ -10,8 +10,14 @@
     <!-- File Appender: Writes logs to a file -->
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         <file>stresser.log</file>
+        <providers>
+        <timestamp>
+            <fieldName>log_timestamp</fieldName>
+            <pattern>[UNIX_TIMESTAMP_AS_NUMBER]</pattern>
+        </timestamp>
+        </providers>
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} - [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %log_timestamp -[%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
 

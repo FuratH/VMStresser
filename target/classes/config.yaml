@@ -1,8 +1,9 @@
 duration: 1800
 report_path: "stresser_report.txt"
+wait_time: 0
 
 cpu:
-  enabled: true
+  enabled: false
   threads: 20
 
 memory:
@@ -45,3 +46,5 @@ limits:
   memory_max_usage_mb: 4096
   disk_max_io_speed_mbps: 100
   network_max_bandwidth_mbps: 50
+
+  #To disable limit set them to -1

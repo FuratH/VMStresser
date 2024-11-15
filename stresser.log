@@ -70,3 +70,25 @@
 2024-11-13 19:48:13 - [main] INFO  com.stresser.Stresser - Logging enabled. Output to file: stresser.log
 2024-11-13 19:48:13 - [main] INFO  com.stresser.Stresser - Starting CPU stress.
 2024-11-13 19:48:13 - [main] INFO  com.stresser.CpuStresser - Generating CPU load for 20 threads with max usage 80% for 1800 seconds.
+2024-11-15 14:08:14 - [main] INFO  com.stresser.Stresser - Starting CPU stress with 3 threads.
+2024-11-15 14:08:14 - [main] INFO  com.stresser.CpuStresser - Generating CPU load for 3 threads with max usage no limit% for 1800 seconds.
+2024-11-15 14:08:46 - [main] INFO  com.stresser.Stresser - Starting CPU stress with 3 threads.
+2024-11-15 14:08:46 - [main] INFO  com.stresser.CpuStresser - Generating CPU load for 3 threads with max usage no limit% for 1800 seconds.
+2024-11-15 14:18:35 - [main] INFO  com.stresser.Stresser - Starting CPU stress with 4 threads. Limit: 3% CPU usage.
+2024-11-15 14:18:36 - [main] INFO  com.stresser.CpuStresser - Generating CPU load for 4 threads with max usage 3% for 1800 seconds.
+2024-11-15 14:19:36 - [main] INFO  com.stresser.Stresser - Starting CPU stress with 4 threads. Limit: 10% CPU usage.
+2024-11-15 14:19:36 - [main] INFO  com.stresser.CpuStresser - Generating CPU load for 4 threads with max usage 10% for 1800 seconds.
+2024-11-15 14:50:09 - [main] INFO  com.stresser.Stresser - Starting CPU stress with 4 threads. Limit: 10% CPU usage.
+2024-11-15 14:50:09 - [main] INFO  com.stresser.CpuStresser - Generating CPU load for 4 threads with max usage 10% for 120 seconds.
+2024-11-15 14:52:09 - [main] INFO  com.stresser.Stresser - Stress test completed. Shutting down.
+2024-11-15 14:52:40 - [main] INFO  com.stresser.Stresser - Waiting for 1 minute(s) before starting the stress test...
+2024-11-15 14:53:40 - [main] INFO  com.stresser.Stresser - Starting CPU stress with 4 threads. Limit: 10% CPU usage.
+2024-11-15 14:53:40 - [main] INFO  com.stresser.CpuStresser - Generating CPU load for 4 threads with max usage 10% for 120 seconds.
+2024-11-15 14:55:40 - [main] INFO  com.stresser.Stresser - Stress test completed. Shutting down.
+2024-11-15 15:00:05 - %PARSER_ERROR[log_timestamp] -[main] INFO  com.stresser.Stresser - Starting CPU stress with 4 threads. Limit: 10% CPU usage.
+2024-11-15 15:00:05 - %PARSER_ERROR[log_timestamp] -[main] INFO  com.stresser.CpuStresser - Generating CPU load for 4 threads with max usage 10% for 108000 seconds.
+2024-11-15 15:00:43 - %PARSER_ERROR[log_timestamp] -[main] INFO  com.stresser.Stresser - Starting CPU stress with 4 threads. Limit: 1% CPU usage.
+2024-11-15 15:00:43 - %PARSER_ERROR[log_timestamp] -[main] INFO  com.stresser.CpuStresser - Generating CPU load for 4 threads with max usage 1% for 108000 seconds.
+2024-11-15 15:01:12 - %PARSER_ERROR[log_timestamp] -[main] INFO  com.stresser.Stresser - Starting CPU stress with 4 threads. Limit: 10% CPU usage.
+2024-11-15 15:01:12 - %PARSER_ERROR[log_timestamp] -[main] INFO  com.stresser.CpuStresser - Generating CPU load for 4 threads with max usage 10% for 60 seconds.
+2024-11-15 15:02:12 - %PARSER_ERROR[log_timestamp] -[main] INFO  com.stresser.Stresser - Stress test completed. Shutting down.
