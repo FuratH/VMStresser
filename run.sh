@@ -15,5 +15,5 @@ shift 2  # Shift away the first two arguments so that $@ now contains only the J
 sudo java -jar target/VMStresser-1.0-SNAPSHOT.jar "$@"
 
 # Copy the stresser.log file from the remote instance to the specified Google Cloud Storage bucket
-sudo gcloud compute ssh hamdanfurat@sut --zone "$ZONE" -- \
+sudo gcloud compute ssh hamdanfurat@sut-firecracker --zone "$ZONE" -- \
     "gsutil cp '/stresser.log' 'gs://duet-benchmarking-results/${TIMESTAMP}/stresser.log'"
