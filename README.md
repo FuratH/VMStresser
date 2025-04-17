@@ -53,22 +53,74 @@ Run the tool using:
 java -jar target/VMStresser-1.0-SNAPSHOT.jar [options]
 ```
 
-### Command-line Options (Partial)
+### Command-line Options 
 
-```bash
---help                     Show help message
---list-stressors           List all stressors
---cpu                      Enable CPU stress
---memory                   Enable memory stress
---disk                     Enable disk stress
---network                  Enable network stress
---file-descriptors         Enable file descriptor stress
---threads                  Enable thread stress
---duration                 Duration in minutes
---limit-cpu                Max CPU usage (%)
---limit-memory             Max memory in MB
-...
-```
+### 🧰 **General Options**
+
+| Option              | Description                                |
+|---------------------|--------------------------------------------|
+| `--help`            | Displays help message                      |
+| `--list-stressors`  | Lists all available stressors              |
+
+
+### 🧪 **Enable Stressors**
+
+| Option                  | Description                         |
+|--------------------------|-------------------------------------|
+| `--cpu`                 | Enable CPU stressor                 |
+| `--memory`              | Enable memory stressor              |
+| `--disk`                | Enable disk stressor                |
+| `--network`             | Enable network stressor             |
+| `--file-descriptors`    | Enable file descriptor stressor     |
+| `--threads`             | Enable thread stressor              |
+
+
+### ⏱️ **Timing Configuration**
+
+| Option              | Description                                                       |
+|---------------------|-------------------------------------------------------------------|
+| `--duration`        | Duration of the stress test in **minutes** (default from config)  |
+| `--wait-time`       | Time to wait **before** starting the test in **minutes** (default: 0) |
+
+
+### ⚙️ **Stressor-Specific Configuration**
+
+#### CPU
+
+| Option            | Description                                      |
+|-------------------|--------------------------------------------------|
+| `--cpu-threads`   | Number of threads for CPU stress                 |
+
+#### Memory
+
+| Option               | Description                                       |
+|----------------------|---------------------------------------------------|
+| `--memory-arrays`    | Number of byte arrays to allocate                 |
+| `--array-size`       | Size of each array in **MB**                      |
+
+#### Disk
+
+| Option                 | Description                                     |
+|------------------------|-------------------------------------------------|
+| `--disk-file-count`    | Number of files to write during disk stress     |
+| `--disk-file-size`     | Size of each file in **MB**                     |
+
+#### Network
+
+| Option             | Description                                         |
+|--------------------|-----------------------------------------------------|
+| `--network-url`    | URL to use for downloading data during network stress |
+
+
+### 📉 **Resource Limiters**
+
+| Option               | Description                                      |
+|----------------------|--------------------------------------------------|
+| `--limit-cpu`        | Max CPU usage percentage (e.g., 80 for 80%)      |
+| `--limit-memory`     | Max memory usage in **MB**                       |
+| `--limit-disk-io`    | Max disk I/O speed in **MB/s**                   |
+| `--limit-network`    | Max network bandwidth in **Mbps**                |
+
 
 ---
 
@@ -93,8 +145,7 @@ A helper script `run.sh` is included for executing the stress test remotely and 
 ```
 
 This will:
-- Run the stress test remotely on the instance `hamdanfurat@sut-firecracker`
-- Upload `stresser.log` to: `gs://duet-benchmarking-results/20250417T1200/stresser.log`
+- Upload `stresser.log` to a bucket that has to be defined in run.sh
 
 ---
 
@@ -144,12 +195,7 @@ Command-line arguments override config values.
 
 **Run with custom CPU and memory stress:**
 ```bash
-java -jar target/VMStresser-1.0-SNAPSHOT.jar --cpu --memory --cpu-threads 8 --limit-memory 2048
-```
-
-**Run based only on YAML configuration:**
-```bash
-java -jar target/VMStresser-1.0-SNAPSHOT.jar --cpu --memory --disk --network
+java -jar target/VMStresser-1.0-SNAPSHOT.jar --cpu --cpu-threads 60 --duration 5 --wait-time 3
 ```
 
 ---
