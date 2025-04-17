@@ -29,6 +29,7 @@
 
 ---
 
+
 ## Installation
 
 1. **Clone the repository**
@@ -38,10 +39,23 @@
    ```
 
 2. **Build the project**
-   Ensure you have Maven and JDK installed:
+   Make sure you have Maven and JDK installed:
    ```bash
    mvn clean package
    ```
+
+3. **Configure Remote VM Instance Name (Optional for GCP Users)**
+   If you're running the stress test on a **Google Cloud VM**, update the VM instance name inside the `run.sh` script:
+
+   Open `run.sh` and update the SSH target:
+   ```bash
+   sudo gcloud compute ssh <YOUR-USERNAME>@<YOUR-INSTANCE-NAME> --zone "$ZONE" -- \
+       "gsutil cp '/VMStresser/stresser.log' 'gs://duet-benchmarking-results/${TIMESTAMP}/stresser.log'"
+   ```
+
+   Replace:
+   - `<YOUR-USERNAME>` with your GCP username (e.g., `hamdanfurat`)
+   - `<YOUR-INSTANCE-NAME>` with the correct VM name (e.g., `sut-firecracker`)
 
 ---
 
